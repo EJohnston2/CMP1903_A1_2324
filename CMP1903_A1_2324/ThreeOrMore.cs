@@ -13,7 +13,8 @@ namespace CMP1903_A1_2324
       Die3 = int Roll():
       Die4 = int Roll();
       Die5 = int Roll();
-      
+
+      if 
 
     }
 }
