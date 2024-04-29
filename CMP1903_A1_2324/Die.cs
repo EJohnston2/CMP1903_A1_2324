@@ -16,7 +16,8 @@ namespace CMP1903_A1_2324
             return RollValue;
         }
 
-    //simulates a dice roll
-    //creates a random number between 1 to 6
     }
 }
+
+//simulates a die roll
+//generates a random number between 1 and 6
