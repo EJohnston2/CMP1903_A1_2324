@@ -34,3 +34,9 @@ namespace CMP1903_A1_2324
 
     }
 }
+
+//simulates two die rolls
+//returns value of both 
+//returns total of both die
+//if die are equal, total is doubled
+//if total equals 7, game is ended
