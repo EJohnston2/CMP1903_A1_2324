@@ -18,7 +18,7 @@ namespace CMP1903_A1_2324
         public int Roll1(Random _rand)
         { 
             RollValue1 = int _rand.Next(1, 7, 1);
-            Console.WriteLine
+            Console.WriteLine($"Value of Dice 1 is: {RollValue1}");
             return RollValue1;
             Total = int RollValue1 + int Total;
             return Total
@@ -28,6 +28,7 @@ namespace CMP1903_A1_2324
         public int Roll2(Random _rand)
         {
             RollValue2 = int _rand.Next(1, 7, 1):
+            Console.WriteLine($"Value of Dice 2 is: {RollValue2}");
             return RollValue2;
             Total = int RollValue2 + int Total; 
             return Total
