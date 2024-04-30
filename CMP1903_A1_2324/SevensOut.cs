@@ -26,6 +26,7 @@ namespace CMP1903_A1_2324
             Console.WriteLine($"Total of both die is: {str Total}");
             if (int Total == 7)
             {
+                Total = 0
                 Console.WriteLine($"You're total is 7- Game over!!");
                 Quit();
             }
