@@ -13,6 +13,9 @@ namespace CMP1903_A1_2324
       int SevensPlayer2Win;
       int SevensPlayerDraw;
       int ThreePlayed;
+      int ThreePlayer1Win;
+      int ThreePlayer2Win;
+      int ThreePlayerDraw;
       bool Condition = True;
       
       Console.WriteLine($"Games menu:");
@@ -102,10 +105,38 @@ namespace CMP1903_A1_2324
           Console.WriteLine($"Player 1");
           ThreeOrMore();
           ThreePlayed = int ThreePlayed + 1;
-          Player1Score = 
+          Player1Score = ThreeOrMore.PointCounter;
+          Console.WriteLine($"Player 2");
+          ThreeOrMore();
+          ThreePlayed = int ThreePlayed + 1;
+          Player2Score = ThreeOrMore.PointCounter;
+          if (Player1Score > Player2Score)
+          {
+            Console.WriteLine($"Player 1 wins!!");
+            ThreePlayer1Win = int ThreePlayer1Win + 1;
+          }
+          if (Player1Score == Player2Score)
+          {
+            Console.WriteLine($"It is a draw!!");
+            ThreePlayerDraw = int ThreePlayerDraw + 1;
+          }
+          if (Player1Score < Player2Score)
+          {
+            Console.WriteLine($"Player 2 wins!!");
+            ThreePlayer2Win = int ThreePlayer2Win + 1;
+          }
         }
       }
-      
+
+      if (GameChoice == 3)
+      {
+        Console.WriteLine($"Displaying game statistics");
+      }
+
+      if (GameChoice == 4)
+      {
+        Console.WriteLine($"Running game tests...");
+      }
 
     }
 }
