@@ -59,10 +59,4 @@ namespace CMP1903_A1_2324
             int[] UpdatedDieValues = {Die1, Die2, NewDie3, NewDie4, NewDie5};
             Console.WriteLine($"Your updated die values are: "};
             Console.WriteLine(UpdatedDieValues);
-          }
-                              
-         
-        
-
-    
-
+          }     
