@@ -138,13 +138,19 @@ namespace CMP1903_A1_2324
         Console.WriteLine($"You have rolled five of the same!");
         Console.WriteLine($"Twelve points!!");
         PointCounter = int PointCounter + 12;
-      }
+			}
+
+	 		Console.WriteLine($"You have scored " + {str PointCounter} + " points!");
+			if (int PointCounter >= 20)
+			{
+				Console.WriteLine($"You have reached 20!");
+				Console.WriteLine($"Winner!");
+			}
+
+	   }										
    }
 }
-
-
-
-
+}
 															
                               
                               
