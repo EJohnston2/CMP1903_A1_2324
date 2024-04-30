@@ -8,23 +8,50 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        Console.WriteLine($"Games menu:");
-        Console.WriteLine($"1. Seven's out game");
-        Console.WriteLine($"2. Three or more game");
-        Console.WriteLine($"3. View stats");
-        Console.WriteLine($"4. Tests");
+      bool Condition = True;
+      
+      Console.WriteLine($"Games menu:");
+      Console.WriteLine($"1. Seven's out game");
+      Console.WriteLine($"2. Three or more game");
+      Console.WriteLine($"3. View stats");
+      Console.WriteLine($"4. Tests");
         
-        int GameChoice = Console.ReadLine($"Enter your selection");
+      int GameChoice = Console.ReadLine($"Enter your selection");
 
-        if (GameChoice == 1)
+      if (GameChoice == 1)
+      {
+        Console.WriteLine($"You have chosen the Seven's out game");
+        PartnerChoice = Console.ReadLine($"Solo or partner play?");
+        if (PartnerChoice == "Solo")
         {
-            Console.WriteLine($"You have chosen the Seven's out game");
-            PartnerChoice = Console.ReadLine($"Solo or partner play?");
-            if (PartnerChoice == "Solo")
+          Console.WriteLine($"Round 1");
+          SevensOut();
+          while (Condition == True)
+          {
+            RoundChoice = Console.ReadLine($"Another round? (yes/no)");
+            if (RoundChoice == ("yes" || "Yes"))
             {
-                
+              SevensOut();
             }
+            if (RoundChoice == ("no" || "No"))
+            {
+              Condition = False;
+            }
+          }  
         }
+        if (PartnerChoice == "Partner")
+        {
+          Console.WriteLine($"Round 1, Player 1");
+          SevensOut();
+          Console.WriteLine($"Round 1, Player 2");
+          SevensOut();
+        }
+      }
+      if (GameChoice == 2)
+      {
+        Console.WriteLine($"You have chosen the Three or more game");
+        P
+      }
 
     }
 }
