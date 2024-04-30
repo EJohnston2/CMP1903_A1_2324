@@ -8,6 +8,9 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+      int SevensPlayer1Win;
+      int SevensPlayer2Win;
+      int SevensPlayerDraw;
       bool Condition = True;
       
       Console.WriteLine($"Games menu:");
@@ -41,16 +44,39 @@ namespace CMP1903_A1_2324
         }
         if (PartnerChoice == "Partner")
         {
-          Console.WriteLine($"Round 1, Player 1");
+          Console.WriteLine($"Player 1");
           SevensOut();
-          Console.WriteLine($"Round 1, Player 2");
+          Player1Score = SevensOut.Total;
+          Console.WriteLine($"Player 2");
           SevensOut();
+          Player2Score = SevensOut.Total;
+          if (Player1Score > Player2Score)
+          {
+            Console.WriteLine($"Player 1 wins!!");
+            SevensPlayer1Win = int SevensPlayer1Win + 1;
+          }
+          if (Player1Score == Player2Score)
+          {
+            Console.WriteLine($"It is a draw!!");
+            SevensPlayerDraw == int SevensPlayerDraw + 1;
+          }
+          if (Player1Score < Player2Score)
+          {
+            Console.WriteLine($"Player 2 wins!!");
+            SevensPlayer2Win = int SevensPlayer2Win + 1;
+          }
         }
       }
+      
       if (GameChoice == 2)
       {
         Console.WriteLine($"You have chosen the Three or more game");
-        P
+        PartnerChoice = Console.WriteLine($"Solo or partner play?");
+        if (PartnerChoice == "Solo")
+        {
+          Console.WriteLine($"Round 1");
+          
+        }
       }
 
     }
