@@ -8,14 +8,23 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+        Console.WriteLine($"Games menu:");
+        Console.WriteLine($"1. Seven's out game");
+        Console.WriteLine($"2. Three or more game");
+        Console.WriteLine($"3. View stats");
+        Console.WriteLine($"4. Tests");
+        
+        int GameChoice = Console.ReadLine($"Enter your selection");
 
-        //Methods
+        if (GameChoice == 1)
+        {
+            Console.WriteLine($"You have chosen the Seven's out game");
+            PartnerChoice = Console.ReadLine($"Solo or partner play?");
+            if (PartnerChoice == "Solo")
+            {
+                
+            }
+        }
 
     }
 }
