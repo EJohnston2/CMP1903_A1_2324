@@ -9,6 +9,7 @@ namespace CMP1903_A1_2324
     internal class ThreeOrMore
     {
       int Counter; 
+      int PointCounter;
       
       public ThreeOrMore()
       {
@@ -27,9 +28,9 @@ namespace CMP1903_A1_2324
         {
           for j in range((i+1), 6, 1)
           {
-            if (i == j) 
+            if (DieValues[i] == DieValues[j]) 
             {
-              Counter = int Counter + 1
+              Counter = int Counter + 1;
             }
           }
         }
@@ -49,8 +50,38 @@ namespace CMP1903_A1_2324
             int[] NewDieValues = {NewDie1, NewDie2, NewDie3, NewDie4, NewDie5};
             Console.WriteLine($"Your new die values are: ");
             Console.WriteLine(NewDieValues[]);
+
+            for c in range(1, 6, 1)
+            {
+              for d in range((c+1), 6, 1)
+              {
+                if (NewDieValues[c] == NewDieValues[d])
+                {
+                  Counter = int Counter + 1;
+                }
+              }
+            }
+
+            if (Counter == 3)
+            {
+              Console.WriteLine($"You have rolled three of the same!");
+              Console.WriteLine($"Three points!!");
+              PointCounter = int PointCounter + 3;
+            }
+            if (Counter == 4)
+            {
+              Console.WriteLine($"You have rolled four of the same!");
+              Console.WriteLine($"Six points!!");
+              PointCounter = int PointCounter + 6;
+            }
+            if (Counter == 5)
+            {
+              Console.WriteLine($"You have rolled five of the same!");
+              Console.WriteLine($"Twelve points!!");
+              PointCounter = int PointCounter + 12; 
+            }
           }
-          if (Choice == ("Rethrow the remaining three die" || "Remaining three" || "Rethrow three remaining" || "Three" || "Remaining")
+          if (Choice == ("Rethrow the remaining three die" || "Remaining three" || "Rethrow three remaining" || "Three" || "Remaining"))
           {
             NewDie3 = int Roll();
             NewDie4 = int Roll();
@@ -58,5 +89,63 @@ namespace CMP1903_A1_2324
 
             int[] UpdatedDieValues = {Die1, Die2, NewDie3, NewDie4, NewDie5};
             Console.WriteLine($"Your updated die values are: "};
-            Console.WriteLine(UpdatedDieValues);
-          }     
+            Console.WriteLine(UpdatedDieValues[]);
+
+            for a in range(1, 6, 1)
+            {
+              for b in range((a+1), 6, 1)
+              {
+                if (UpdatedDieValues[a] == UpdatedDieValues[b])
+                {
+                  Counter = int Counter + 1;
+                }  
+              }
+            }
+
+            if (Counter == 3)
+            {   
+              Console.WriteLine($"You have rolled three of the same!");
+              Console.WriteLine($"Three points!!");
+              PointCounter = int PointCounter + 3;
+            }
+            if (Counter == 4)
+            {
+              Console.WriteLine($"You have rolled four of the same!");
+              Console.WriteLine($"Six points!!");
+              PointCounter = int PointCounter + 6;
+            }
+            if (Counter == 5)
+            {
+              Console.WriteLine($"You have rolled five of the same!");
+              Console.WriteLine($"Twelve points!!");
+              PointCounter = int PointCounter + 12;
+            }
+      }
+      if (Counter == 3)
+      {
+        Console.WriteLine($"You have rolled three of the same!");
+        Console.WriteLine($"Three points!!");
+        PointCounter = int PointCounter + 3;
+      }
+      if (Counter == 4)
+      {
+        Console.WriteLine($"You have rolled four of the same!");
+        Console.WriteLine($"Six points!!");
+        PointCounter = int PointCounter + 6;
+      }
+      if (Counter == 5)
+      {
+        Console.WriteLine($"You have rolled five of the same!");
+        Console.WriteLine($"Twelve points!!");
+        PointCounter = int PointCounter + 12;
+      }
+   }
+}
+
+
+
+
+															
+                              
+                              
+                              
