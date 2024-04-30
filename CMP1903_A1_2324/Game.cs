@@ -8,6 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+      int SevensSoloHigh;
       int SevensPlayer1Win;
       int SevensPlayer2Win;
       int SevensPlayerDraw;
@@ -29,6 +30,7 @@ namespace CMP1903_A1_2324
         {
           Console.WriteLine($"Round 1");
           SevensOut();
+          SevensSoloHigh
           while (Condition == True)
           {
             RoundChoice = Console.ReadLine($"Another round? (yes/no)");
@@ -75,6 +77,7 @@ namespace CMP1903_A1_2324
         if (PartnerChoice == "Solo")
         {
           Console.WriteLine($"Round 1");
+          ThreeOrMore();
           
         }
       }
