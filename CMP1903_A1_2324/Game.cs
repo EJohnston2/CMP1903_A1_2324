@@ -12,10 +12,12 @@ namespace CMP1903_A1_2324
       int SevensPlayer1Win;
       int SevensPlayer2Win;
       int SevensPlayerDraw;
+      int SevensHigh = 0;
       int ThreePlayed;
       int ThreePlayer1Win;
       int ThreePlayer2Win;
       int ThreePlayerDraw;
+      int ThreeHigh = 0;
       bool Condition = True;
       
       Console.WriteLine($"Games menu:");
@@ -34,6 +36,11 @@ namespace CMP1903_A1_2324
         {
           Console.WriteLine($"Round 1");
           SevensOut();
+          Score = int SevensOut.Total;
+          if (Score > SevensHigh)
+          {
+            SevensHigh = int Score;
+          }
           SevensPlayed = int SevensPlayed + 1;
           while (Condition == True)
           {
@@ -41,6 +48,11 @@ namespace CMP1903_A1_2324
             if (RoundChoice == ("yes" || "Yes"))
             {
               SevensOut();
+              Score = int SevensOut.Total;
+              if (Score > SevensHigh)
+              {
+                SevensHigh = int Score;
+              }
               SevensPlayed = int SevensPlayed + 1;
             }
             if (RoundChoice == ("no" || "No"))
@@ -55,10 +67,18 @@ namespace CMP1903_A1_2324
           SevensOut();
           SevensPlayed = int SevensPlayed + 1; 
           Player1Score = SevensOut.Total;
+          if (Player1Score > SevensHigh)
+          {
+            SevensHigh = int Player1Score;
+          }
           Console.WriteLine($"Player 2");
           SevensOut();
           SevensPlayed = int SevensPlayed + 1;
           Player2Score = SevensOut.Total;
+          if (Player2Score > SevensHigh)
+          {
+            SevensHigh = int Player2Score;
+          }
           if (Player1Score > Player2Score)
           {
             Console.WriteLine($"Player 1 wins!!");
@@ -85,6 +105,11 @@ namespace CMP1903_A1_2324
         {
           Console.WriteLine($"Round 1");
           ThreeOrMore();
+          Score = int ThreeOrMore.PointCounter;
+          if (Score > ThreeHigh)
+          {
+            ThreeHigh = int Score;
+          }
           ThreePlayed = int ThreePlayed + 1;
           while (Condition == True)
           {
@@ -106,10 +131,18 @@ namespace CMP1903_A1_2324
           ThreeOrMore();
           ThreePlayed = int ThreePlayed + 1;
           Player1Score = ThreeOrMore.PointCounter;
+          if (Player1Score > ThreeHigh)
+          {
+            ThreeHigh = int Player1Score;
+          }
           Console.WriteLine($"Player 2");
           ThreeOrMore();
           ThreePlayed = int ThreePlayed + 1;
           Player2Score = ThreeOrMore.PointCounter;
+          if (Player2Score > ThreeHigh)
+          {
+            ThreeHigh = int Player2Score;
+          }
           if (Player1Score > Player2Score)
           {
             Console.WriteLine($"Player 1 wins!!");
