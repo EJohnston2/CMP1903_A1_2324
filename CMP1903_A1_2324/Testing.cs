@@ -8,6 +8,8 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
+        Game();
+        
         NewDie = Die();
         debug.assert(NewDie > 6);
         debug.assert(NewDie < 1);
