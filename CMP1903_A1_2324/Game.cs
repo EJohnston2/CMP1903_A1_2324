@@ -164,6 +164,7 @@ namespace CMP1903_A1_2324
       if (GameChoice == 3)
       {
         Console.WriteLine($"Displaying game statistics");
+        Stats();
       }
 
       if (GameChoice == 4)
