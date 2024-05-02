@@ -13,6 +13,10 @@ namespace CMP1903_A1_2324
       {
 				public int PointCounter;
 				public int Counter = 0; 
+
+				public List<int> DieValues = new List<int>();
+				public List<int> NewDieValues = new List<int>();
+				public List<int> UpdatedDieValues = new List<int>();
 				
         private int Die1 = int Die.Roll();
         private int  Die2 = int Die.Roll();
@@ -20,7 +24,7 @@ namespace CMP1903_A1_2324
         private int Die4 = int Die.Roll();
         private int Die5 = int Die.Roll();
 
-        public int[] DieValues = {Die1, Die2, Die3, Die4, Die5};
+        int[] DieValues = {Die1, Die2, Die3, Die4, Die5};
 
         Console.WriteLine($"Your die values are: ");
         Console.WriteLine(DieValues[]);
