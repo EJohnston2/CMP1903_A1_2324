@@ -22,7 +22,7 @@ namespace CMP1903_A1_2324
         {
             private Test = new SevensOut();
             Debug.Assert(Test.GameOver(7), "Sevens out total score error");
-            Debug.Assert(Test.GameOver(9), "Sevens out total score error");
+            Debug.Assert(!Test.GameOver(9), "Sevens out total score error");
             Debug.Assert(!Test.GameOver(6), "Sevens out total score error");
         }
 
