@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class SevensOut
-    {
-        int Total; 
-
+    public class SevensOut
+    { 
         public SevensOut()
         {
-            public Total;
+            public int Total;
             
             private Die1 = int Roll();
             private Die2 = int Roll();
