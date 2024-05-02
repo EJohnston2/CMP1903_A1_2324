@@ -8,7 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        int RollValue;
+        public int RollValue;
         
         public int Roll(Random _rand)
         {
