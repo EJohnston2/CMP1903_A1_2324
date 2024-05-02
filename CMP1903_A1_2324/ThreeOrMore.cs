@@ -162,6 +162,9 @@ namespace CMP1903_A1_2324
 }
 }
 															
-                              
+//rolls 5 die
+//saves die to an array
+//implements the game rules given in the brief
+//if total points reaches 20 or above outputss winner to the user 
                               
                               
