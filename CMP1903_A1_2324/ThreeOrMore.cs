@@ -14,11 +14,11 @@ namespace CMP1903_A1_2324
 				public int Counter = 0;
 				public int PointCounter;
 				
-        private int Die1 = int Roll();
-        private int  Die2 = int Roll();
-        private int Die3 = int Roll():
-        private int Die4 = int Roll();
-        private int Die5 = int Roll();
+        private int Die1 = int Die.Roll();
+        private int  Die2 = int Die.Roll();
+        private int Die3 = int Die.Roll():
+        private int Die4 = int Die.Roll();
+        private int Die5 = int Die.Roll();
 
         public int[] DieValues = {Die1, Die2, Die3, Die4, Die5};
 
@@ -42,11 +42,11 @@ namespace CMP1903_A1_2324
           Choice = Console.ReadLine($"Rethrow all die or rethrow the remaining three die?");
           if (Choice == ("Rethrow all die" || "Rethrow all" || "All"))
           {
-            NewDie1 = int Roll();
-            NewDie2 = int Roll();
-            NewDie3 = int Roll();
-            NewDie4 = int Roll();
-            NewDie5 = int Roll();
+            NewDie1 = int Die.Roll();
+            NewDie2 = int Die.Roll();
+            NewDie3 = int Die.Roll();
+            NewDie4 = int Die.Roll();
+            NewDie5 = int Die.Roll();
 
             int[] NewDieValues = {NewDie1, NewDie2, NewDie3, NewDie4, NewDie5};
             Console.WriteLine($"Your new die values are: ");
@@ -84,9 +84,9 @@ namespace CMP1903_A1_2324
           }
           if (Choice == ("Rethrow the remaining three die" || "Remaining three" || "Rethrow three remaining" || "Three" || "Remaining"))
           {
-            NewDie3 = int Roll();
-            NewDie4 = int Roll();
-            NewDie5 = int Roll();
+            NewDie3 = int Die.Roll();
+            NewDie4 = int Die.Roll();
+            NewDie5 = int Die.Roll();
 
             int[] UpdatedDieValues = {Die1, Die2, NewDie3, NewDie4, NewDie5};
             Console.WriteLine($"Your updated die values are: "};
