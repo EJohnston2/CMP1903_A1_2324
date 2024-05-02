@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
     {
         public static void TestDie()
         {
-            private TestDie = new Die();
+            private Test = new Die();
             for (int i = 0, i < 1000; i++)
             {
                 private int Result = Die.Roll();
@@ -20,18 +20,18 @@ namespace CMP1903_A1_2324
 
         public static void TestSeven()
         {
-            private TestSeven = new SevensOut();
-            Debug.Assert(TestSeven.GameOver(7), "Sevens out total score error");
-            Debug.Assert(TestSeven.GameOver(9), "Sevens out total score error");
-            Debug.Assert(!TestSeven.GameOver(6), "Sevens out total score error");
+            private Test = new SevensOut();
+            Debug.Assert(Test.GameOver(7), "Sevens out total score error");
+            Debug.Assert(Test.GameOver(9), "Sevens out total score error");
+            Debug.Assert(!Test.GameOver(6), "Sevens out total score error");
         }
 
         public static void TestThree()
         {
-            private TestThree = new ThreeOrMore();
-            Debug.Assert(TestThree.WinnerFound(20), "Three or more score error");
-            Debug.Assert(TestThree.WinnerFound(24), "Three or more score error");
-            Debug.Assert(!TestThree.WinnerFound(18), "Three or more score error");
+            private Test = new ThreeOrMore();
+            Debug.Assert(Test.WinnerFound(20), "Three or more score error");
+            Debug.Assert(Test.WinnerFound(24), "Three or more score error");
+            Debug.Assert(!Test.WinnerFound(18), "Three or more score error");
         }
     }
 }
