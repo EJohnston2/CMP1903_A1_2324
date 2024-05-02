@@ -170,6 +170,12 @@ namespace CMP1903_A1_2324
       if (GameChoice == 4)
       {
         Console.WriteLine($"Running game tests...");
+        Console.WriteLine($"Testing die class: ");
+        Testing.TestDie();
+        Console.WriteLine($"Testing Seven's out game: ");
+        Testing.TestSeven();
+        Console.WriteLine($"Testing Three or more game:");
+        Testing.TestThree();
       }
 
     }
