@@ -64,36 +64,66 @@ namespace CMP1903_A1_2324
         }
         if (PartnerChoice == "Partner")
         {
-          Console.WriteLine($"Player 1");
-          SevensOut.SevensOut();
-          SevensPlayed = int SevensPlayed + 1; 
-          Player1Score = SevensOut.Total;
-          if (Player1Score > SevensHigh)
+          private str CompChoice = Console.ReadLine($"Play real life partner or against the computer?");
+          if (CompChoice == "Real life")
           {
-            SevensHigh = int Player1Score;
+            Console.WriteLine($"Player 1");
+            SevensOut.SevensOut();
+            SevensPlayed = int SevensPlayed + 1; 
+            private int Player1Score = SevensOut.Total;
+            if (Player1Score > SevensHigh)
+            {
+              SevensHigh = int Player1Score;
+            }
+            Console.WriteLine($"Player 2");
+            SevensOut.SevensOut();
+            SevensPlayed = int SevensPlayed + 1;
+            private int Player2Score = SevensOut.Total;
+            if (Player2Score > SevensHigh)
+            {
+              SevensHigh = int Player2Score;
+            }
+            if (Player1Score > Player2Score)
+            {
+              Console.WriteLine($"Player 1 wins!!");
+              SevensPlayer1Win = int SevensPlayer1Win + 1;
+            }
+            if (Player1Score == Player2Score)
+            {
+              Console.WriteLine($"It is a draw!!");
+              SevensPlayerDraw == int SevensPlayerDraw + 1;
+            }
+            if (Player1Score < Player2Score)
+            {
+              Console.WriteLine($"Player 2 wins!!");
+              SevensPlayer2Win = int SevensPlayer2Win + 1;
+            }
           }
-          Console.WriteLine($"Player 2");
-          SevensOut.SevensOut();
-          SevensPlayed = int SevensPlayed + 1;
-          Player2Score = SevensOut.Total;
-          if (Player2Score > SevensHigh)
+          if (CompChoice == "Computer")
           {
-            SevensHigh = int Player2Score;
-          }
-          if (Player1Score > Player2Score)
-          {
-            Console.WriteLine($"Player 1 wins!!");
-            SevensPlayer1Win = int SevensPlayer1Win + 1;
-          }
-          if (Player1Score == Player2Score)
-          {
-            Console.WriteLine($"It is a draw!!");
-            SevensPlayerDraw == int SevensPlayerDraw + 1;
-          }
-          if (Player1Score < Player2Score)
-          {
-            Console.WriteLine($"Player 2 wins!!");
-            SevensPlayer2Win = int SevensPlayer2Win + 1;
+            Console.WriteLine($"Your turn");
+            SevensOut.SevensOut();
+            SevensPlayed = int SevensPlayed + 1;
+            private int UsersScore = SevensOut.Total;
+            if (UsersScore > SevensHigh)
+            {
+              SevensHigh = int UsersScore;
+            }
+            Console.WriteLine($"Computer's turn");
+            SevensOut.SevensOut();
+            private int CompScore = SevensOut.Total;
+            if (UsersScore > CompScore)
+            {
+              Console.WriteLine($"You won!!");
+            }
+            if (UsersScore == CompScore)
+            {
+              Console.WriteLine($"It is a draw!!");
+            }
+            if (UsersScore < CompScore)
+            {
+              Console.WriteLine($"You lost :(");
+            }
           }
         }
       }
@@ -128,36 +158,66 @@ namespace CMP1903_A1_2324
         }
         if (PartnerChoice == "Partner")
         {
-          Console.WriteLine($"Player 1");
-          ThreeOrMore.ThreeOrMore();
-          ThreePlayed = int ThreePlayed + 1;
-          Player1Score = ThreeOrMore.PointCounter;
-          if (Player1Score > ThreeHigh)
+          private str CompChoice = Console.ReadLine($"Play real life partner or against the computer?");
+          if (CompChoice == "Real life")
           {
-            ThreeHigh = int Player1Score;
+            Console.WriteLine($"Player 1");
+            ThreeOrMore.ThreeOrMore();
+            ThreePlayed = int ThreePlayed + 1;
+            Player1Score = ThreeOrMore.PointCounter;
+            if (Player1Score > ThreeHigh)
+            {
+              ThreeHigh = int Player1Score;
+            }
+            Console.WriteLine($"Player 2");
+            ThreeOrMore.ThreeOrMore();
+            ThreePlayed = int ThreePlayed + 1;
+            Player2Score = ThreeOrMore.PointCounter;
+            if (Player2Score > ThreeHigh)
+            {
+              ThreeHigh = int Player2Score;
+            }
+            if (Player1Score > Player2Score)
+            {
+              Console.WriteLine($"Player 1 wins!!");
+              ThreePlayer1Win = int ThreePlayer1Win + 1;
+            }
+            if (Player1Score == Player2Score)
+            {
+              Console.WriteLine($"It is a draw!!");
+              ThreePlayerDraw = int ThreePlayerDraw + 1;
+            }
+            if (Player1Score < Player2Score)
+            {
+              Console.WriteLine($"Player 2 wins!!");
+              ThreePlayer2Win = int ThreePlayer2Win + 1;
+            }
           }
-          Console.WriteLine($"Player 2");
-          ThreeOrMore.ThreeOrMore();
-          ThreePlayed = int ThreePlayed + 1;
-          Player2Score = ThreeOrMore.PointCounter;
-          if (Player2Score > ThreeHigh)
+          if (CompChoice == "Computer")
           {
-            ThreeHigh = int Player2Score;
-          }
-          if (Player1Score > Player2Score)
-          {
-            Console.WriteLine($"Player 1 wins!!");
-            ThreePlayer1Win = int ThreePlayer1Win + 1;
-          }
-          if (Player1Score == Player2Score)
-          {
-            Console.WriteLine($"It is a draw!!");
-            ThreePlayerDraw = int ThreePlayerDraw + 1;
-          }
-          if (Player1Score < Player2Score)
-          {
-            Console.WriteLine($"Player 2 wins!!");
-            ThreePlayer2Win = int ThreePlayer2Win + 1;
+            Console.WriteLine($"Your turn");
+            ThreeOrMore.ThreeOrMore();
+            ThreePlayed = int ThreePlayed + 1;
+            private int UsersScore = ThreeOrMore.PointCounter;
+            if (UsersScore > ThreeHigh)
+            {
+              ThreeHigh = int UsersScore;
+            }
+            Console.WriteLine($"Computer's turn");
+            ThreeOrMore.ThreeOrMore();
+            private int CompScore = ThreeOrMore.PointCounter;
+            if (UsersScore > CompScore)
+            {
+              Console.WriteLine(%"You won!!");
+            }
+            if (UsersScore == CompScore)
+            {
+              Console.WriteLine(%"It is a draw!!");
+            }
+            if (UsersScore < CompScore)
+            {
+              Console.WriteLine("You lost :(");
+            }
           }
         }
       }
