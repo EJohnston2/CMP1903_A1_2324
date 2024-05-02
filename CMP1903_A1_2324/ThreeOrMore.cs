@@ -11,8 +11,8 @@ namespace CMP1903_A1_2324
       
       public ThreeOrMore()
       {
-				public int Counter = 0;
 				public int PointCounter;
+				public int Counter = 0; 
 				
         private int Die1 = int Die.Roll();
         private int  Die2 = int Die.Roll();
