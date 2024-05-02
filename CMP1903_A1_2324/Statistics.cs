@@ -27,4 +27,6 @@ namespace CMP1903_A1_2324
         Console.WriteLine($"High score: " + {str Game.ThreeHigh});
       }  
     }
+
+    //outputs the statistics saved in the game class
 }
