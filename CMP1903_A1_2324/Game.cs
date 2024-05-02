@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Game
+    public class Game
     {
-      int SevensPlayed;
-      int SevensPlayer1Win;
-      int SevensPlayer2Win;
-      int SevensPlayerDraw;
-      int SevensHigh = 0;
-      int ThreePlayed;
-      int ThreePlayer1Win;
-      int ThreePlayer2Win;
-      int ThreePlayerDraw;
-      int ThreeHigh = 0;
-      bool Condition = True;
+      public int SevensPlayed;
+      public int SevensPlayer1Win;
+      public int SevensPlayer2Win;
+      public int SevensPlayerDraw;
+      public int SevensHigh = 0;
+      public int ThreePlayed;
+      public int ThreePlayer1Win;
+      public int ThreePlayer2Win;
+      public int ThreePlayerDraw;
+      public int ThreeHigh = 0;
+    
+      private bool Condition = True;
       
       Console.WriteLine($"Games menu:");
       Console.WriteLine($"1. Seven's out game");
@@ -35,7 +36,7 @@ namespace CMP1903_A1_2324
         if (PartnerChoice == "Solo")
         {
           Console.WriteLine($"Round 1");
-          SevensOut();
+          SevensOut.SevensOut();
           Score = int SevensOut.Total;
           if (Score > SevensHigh)
           {
@@ -44,11 +45,11 @@ namespace CMP1903_A1_2324
           SevensPlayed = int SevensPlayed + 1;
           while (Condition == True)
           {
-            RoundChoice = Console.ReadLine($"Another round? (yes/no)");
+            private str RoundChoice = Console.ReadLine($"Another round? (yes/no)");
             if (RoundChoice == ("yes" || "Yes"))
             {
               SevensOut();
-              Score = int SevensOut.Total;
+              private int Score = int SevensOut.Total;
               if (Score > SevensHigh)
               {
                 SevensHigh = int Score;
@@ -64,7 +65,7 @@ namespace CMP1903_A1_2324
         if (PartnerChoice == "Partner")
         {
           Console.WriteLine($"Player 1");
-          SevensOut();
+          SevensOut.SevensOut();
           SevensPlayed = int SevensPlayed + 1; 
           Player1Score = SevensOut.Total;
           if (Player1Score > SevensHigh)
@@ -72,7 +73,7 @@ namespace CMP1903_A1_2324
             SevensHigh = int Player1Score;
           }
           Console.WriteLine($"Player 2");
-          SevensOut();
+          SevensOut.SevensOut();
           SevensPlayed = int SevensPlayed + 1;
           Player2Score = SevensOut.Total;
           if (Player2Score > SevensHigh)
@@ -104,8 +105,8 @@ namespace CMP1903_A1_2324
         if (PartnerChoice == "Solo")
         {
           Console.WriteLine($"Round 1");
-          ThreeOrMore();
-          Score = int ThreeOrMore.PointCounter;
+          ThreeOrMore.ThreeOrMore();
+          private int Score = int ThreeOrMore.PointCounter;
           if (Score > ThreeHigh)
           {
             ThreeHigh = int Score;
@@ -113,10 +114,10 @@ namespace CMP1903_A1_2324
           ThreePlayed = int ThreePlayed + 1;
           while (Condition == True)
           {
-            RoundChoice = Console.ReadLine($"Another round? (yes/no)");
+            private str RoundChoice = Console.ReadLine($"Another round? (yes/no)");
             if (RoundChoice == ("yes" || "Yes"))
             {
-              ThreeOrMore();
+              ThreeOrMore.ThreeOrMore();
               ThreePlayed = int ThreePlayed + 1;
             }
             if (RoundChoice == ("no" || "No"))
@@ -128,7 +129,7 @@ namespace CMP1903_A1_2324
         if (PartnerChoice == "Partner")
         {
           Console.WriteLine($"Player 1");
-          ThreeOrMore();
+          ThreeOrMore.ThreeOrMore();
           ThreePlayed = int ThreePlayed + 1;
           Player1Score = ThreeOrMore.PointCounter;
           if (Player1Score > ThreeHigh)
@@ -136,7 +137,7 @@ namespace CMP1903_A1_2324
             ThreeHigh = int Player1Score;
           }
           Console.WriteLine($"Player 2");
-          ThreeOrMore();
+          ThreeOrMore.ThreeOrMore();
           ThreePlayed = int ThreePlayed + 1;
           Player2Score = ThreeOrMore.PointCounter;
           if (Player2Score > ThreeHigh)
@@ -164,7 +165,7 @@ namespace CMP1903_A1_2324
       if (GameChoice == 3)
       {
         Console.WriteLine($"Displaying game statistics");
-        Stats();
+        Statistics.Stats();
       }
 
       if (GameChoice == 4)
