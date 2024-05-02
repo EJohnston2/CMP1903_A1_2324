@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class ThreeOrMore
+    public class ThreeOrMore
     {
-      int Counter; 
-      int PointCounter;
       
       public ThreeOrMore()
       {
-        Die1 = int Roll();
-        Die2 = int Roll();
-        Die3 = int Roll():
-        Die4 = int Roll();
-        Die5 = int Roll();
+				public int Counter = 0;
+				public int PointCounter;
+				
+        private int Die1 = int Roll();
+        private int  Die2 = int Roll();
+        private int Die3 = int Roll():
+        private int Die4 = int Roll();
+        private int Die5 = int Roll();
 
-        int[] DieValues = {Die1, Die2, Die3, Die4, Die5};
+        public int[] DieValues = {Die1, Die2, Die3, Die4, Die5};
 
         Console.WriteLine($"Your die values are: ");
         Console.WriteLine(DieValues[]);
@@ -145,6 +146,11 @@ namespace CMP1903_A1_2324
 			{
 				Console.WriteLine($"You have reached 20!");
 				Console.WriteLine($"Winner!");
+			}
+
+			public bool WinnerFound(int PointCounter)
+		  {
+				return PointCounter >= 20;
 			}
 
 	   }										
