@@ -10,12 +10,12 @@ namespace CMP1903_A1_2324
     {
         public static void TestDie()
         {
-            private Test = new Die();
-            for (int i = 0, i < 1000; i++)
-            {
-                private int Result = Die.Roll();
-                Debug.Assert(Result >= 1 && Result <=6, "Die roll out of range");
-            }
+          private Test = new Die();
+          for (int i = 0, i < 1000; i++)
+          {
+            private int Result = Die.Roll();
+            Debug.Assert(Result >= 1 && Result <=6, "Die roll out of range");
+          }
         }
 
         public static void TestSeven()
@@ -35,3 +35,7 @@ namespace CMP1903_A1_2324
         }
     }
 }
+
+//checks output of die roll is between 1 and 6 
+//checks that sevens out game finishes when it reaches 7 
+//checks the boundaries of the three or more total
